@@ -2,4 +2,5 @@ Dashboards Built Via Various Tools:
 
 Tableau - https://public.tableau.com/shared/6CQXHWYHB?:display_count=n&:origin=viz_share_link
 
-AWS Quicksight - https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/aad0aec6-e12a-40f0-9817-3d7d6061ae42/preferences
+AWS Quicksight - 
+https://us-east-1.quicksight.aws.amazon.com/sn/accounts/635431166219/dashboards/aad0aec6-e12a-40f0-9817-3d7d6061ae42?directory_alias=kiranmayiquicksight
