@@ -1,0 +1,74 @@
+Microsoft SQl Manageement Studio: 
+
+- Initially loaded the Developer version than realized we just need the Basic/Express version.
+Had to uninstall & reload again.
+
+1. Firstly converted xls to csv with comma delimiter.
+2. Then database, task, file.
+3. gave an below error : Sol - changed the nvarchar(1) to nvarchar(50) - For a bunch of columns.
+
+Error inserting data into table. (Microsoft.SqlServer.Import.Wizard)
+The given value '8200' of type String from the data source cannot be converted to type 
+nvarchar for Column 11 [total_vaccinations]. (Microsoft.Data.SqlClient)
+String or binary data would be truncated in table '[dbo].[CovidVaccinations]', 
+column 'total_vaccinations'. Truncated value: '8'. (Microsoft.Data.SqlClient)
+
+4. Continent column had blanks/nulls. So updated them for now manually.
+Also had the name of continent in the location field (data Aggeragation maybe).
+
+
+*******************
+Covid Deaths File:
+
+1. Updated all fields to ncharv(50)
+2. Error: Newdeaths was tinyint - updated to smallint
+
+TITLE: Microsoft SQL Server Management Studio
+------------------------------
+Error inserting data into table. (Microsoft.SqlServer.Import.Wizard)
+------------------------------
+ADDITIONAL INFORMATION:
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+------------------------------
+The given value '303' of type String from the data source cannot be converted to type tinyint for Column 8 
+[new_deaths]. (Microsoft.Data.SqlClient)
+------------------------------
+Failed to convert parameter value from a String to a Byte. (Microsoft.Data.SqlClient)
+------------------------------
+Value was either too large or too small for an unsigned byte. (mscorlib).
+
+3. Error :
+TITLE: Microsoft SQL Server Management Studio
+------------------------------
+
+The given value '32793' of type String from the data source cannot be converted to type smallint for 
+Column 7 [total_deaths]. (Microsoft.Data.SqlClient)
+Failed to convert parameter value from a String to a Int16. (Microsoft.Data.SqlClient)
+Value was either too large or too small for an Int16. (mscorlib)
+
+
+4. After Loading close & re-open the app if the new table does not show-up.
+
+New Concepts:
+**** CTE, Cast, Partition, over, 
+
+
+
+Excel Notes
+Tried to merge the longitude sheet with Covid deaths using Data Formulas, did not work as the countries are repeated
+It only works on a unique. Did a right join in AWS Quicksight.
+
+*** The dataset did not have US states to generate a US region map. 
+
+So try to use SQL merge & creating a temporary view. 
+**** Did a join in Microsoft Studio - Need to figure out how to export to an Xls file from the temporary view. 
+
+Tableau - 
+- Figuring out which version was available/which one we can use & the actual installing took some time.
+- The generation of the region map file pictorials were easy as compared to AwS Quiksight graphs as I 
+had to join & build the Geopatial files manually which took some time.
+
+
+
+
+
